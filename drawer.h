@@ -6,15 +6,15 @@
 class basePoint{
   protected:
   int x0, y0;
-  virtual void draw(int, int, int) = 0;
 
   public:
   void move(int, int);
   basePoint(int x = 0, int y = 0);
   ~basePoint(){}
+  virtual void draw(int, int, int) = 0;
 };
 
-class line : public basePoint{
+class line : virtual public basePoint{
   protected:
   int x1,y1;
   int x2,y2;
@@ -27,7 +27,7 @@ class line : public basePoint{
   ~line();
 };
 
-class arc : public basePoint{
+class arc : virtual public basePoint{
   protected:
   int xc, yc;
   double r;

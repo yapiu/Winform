@@ -6,30 +6,36 @@
 class object{
   protected:
   int num;
-  virtual char* who(void) = 0;
+  virtual const char* who(void) = 0;
   //virtual ~object() = default; 
-  object(int number = 0);
+  object();
 };
 
-class oLine : public object, line {
+class oLine : public object, public line {
   public:
-  oLine(int number = 0, int x1 = 0, int y1 = 0, int x2 = 0, int y2 = 0);
-  char* who(void);
+  oLine(int x1 = 0, int y1 = 0, int x2 = 0, int y2 = 0);
+  const char* who(void);
   void draw(int red, int green, int blue);
 };
 
-class oArc : public object, arc{
+class oArc : public object, public arc{
   public:
-  oArc(int number = 0, int x = 0, int y = 0,double R = 0, double angular1 = 0, double angular2 = 0);
-  char* who(void);
+  oArc(int x = 0, int y = 0,double R = 0, double angular1 = 0, double angular2 = 0);
+  const char* who(void);
   void draw(int red, int green, int blue);
 };
 
-class oSegment : public oLine, oArc{
+class oSegment : public oLine, public oArc{
   public:
   void draw(int, int, int);
-  char* who(void);
-  oSegment(int number = 0, int x1 = 0, int y1 = 0, int x2 = 0, int y2 = 0, double R = 0, double angular1 = 0, double angular2 = 0);
+  const char* who(void);
+  oSegment(int x1 = 0, int y1 = 0, int x2 = 0, int y2 = 0);
 };
 
+class oSector : public oSegment{
+  public:
+  void draw(int, int, int);
+  const char* who(void);
+  oSector(int x1 = 0, int y1 = 0, int x2 = 0, int y2 = 0);
+};
 #endif

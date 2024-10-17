@@ -1,4 +1,5 @@
 #include "drawer.h"
+#include "vstub.h"
 
 
 basePoint::basePoint(int x, int y){
@@ -7,6 +8,7 @@ basePoint::basePoint(int x, int y){
 }
 
 void basePoint::move(int dx, int dy){
+  draw(255, 255, 255);
   x0 += dx;
   y0 += dy;
 }
@@ -24,10 +26,13 @@ line::line(int x_1, int y_1, int x_2, int y_2){
 }
 
 void line::move(){
+  // std::vgetchar();
+  draw(0, 0, 0);
   x1 += x0;
   y1 += y0;
   x2 += x0;
   y2 += y0;
+  line::draw(255, 255, 255);
 }
 
 line::~line(){
@@ -52,6 +57,9 @@ arc::~arc(){
 }
 
 void arc::move(){
+  std::vgetchar();
+  draw(0, 0, 0);
   xc += x0;
   yc += y0;
+  arc::draw(255, 255, 255);
 }
