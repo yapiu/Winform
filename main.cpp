@@ -1,5 +1,5 @@
-#include "drawer.h"
-#include "object.h"
+#include "basePoint.h"
+#include "oSector.h"
 #include "vstub.h"
 
 namespace std {
@@ -25,12 +25,20 @@ int main(void) {
     Ar[i]->move(5, 10);
   }
 
-  ar1.move();
-  l1.move();
+  ar1.draw(255, 255, 255);
+  l1.draw(255, 255, 255);
 
   vgetchar();
 
-  ar1.draw(0,0,0);
+  ar1.draw(0, 0, 0);
+  l1.draw(0, 0, 0);
+
+  ar1.move();
+  l1.move(1,1,1,1);
+
+  vgetchar();
+
+  ar1.draw(0, 0, 0);
   l1.draw(0, 0, 0);
 
   vgetchar();
@@ -44,19 +52,18 @@ int main(void) {
   vgetchar();
 
   oSegment osg1(100, 100, 200, 200);
-  osg1.draw(255, 255, 255);
   vc << osg1.who() << endl;
+  osg1.draw(255, 255, 255);
   vgetchar();
 
   osg1.draw(0, 0, 0);
   vgetchar();
 
   oSector osc1(100, 100, 200, 200);
-  osc1.draw(255, 255, 255);
   vc << osc1.who() << endl;
+  osc1.draw(255, 255, 255);
   vgetchar();
 
   return 0;
 }
-
 } // namespace std
