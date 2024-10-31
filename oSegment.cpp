@@ -24,3 +24,7 @@ void oSegment::draw(int red, int green, int blue) {
   oArc::draw(red, green, blue);
 }
 
+void oSegment::move() {
+  oArc::move();
+  oLine::move();
+}

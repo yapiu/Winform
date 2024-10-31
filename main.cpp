@@ -10,6 +10,8 @@ int main(void) {
 
   line l1(1, 1, 100, 100);
   arc ar1(120, 120, 50, 1.5, 2.5);
+  oSector osc1(200, 200, 300, 300);
+  oSegment ogs1(100, 100, 150, 150);
 
   const int number = 10;
 
@@ -17,6 +19,8 @@ int main(void) {
 
   Ar[0] = &l1;
   Ar[1] = &ar1;
+  Ar[2] = &ogs1;
+  Ar[3] = &osc1;
 
   for (int i = 0; i <= number; i++) {
     if (Ar[i] == nullptr) {
@@ -27,19 +31,32 @@ int main(void) {
 
   ar1.draw(255, 255, 255);
   l1.draw(255, 255, 255);
-
+  ogs1.draw(255, 255, 255);
+  osc1.draw(255, 255, 255);
+  
   vgetchar();
 
   ar1.draw(0, 0, 0);
   l1.draw(0, 0, 0);
+  ogs1.draw(0, 0, 0);
+  osc1.draw(0, 0, 0);
 
   ar1.move();
-  l1.move(1,1,1,1);
+  l1.move();
+  ogs1.move();
+  //osc1.move(); // ломается
+
+  ar1.draw(255, 255, 255);
+  l1.draw(255, 255, 255);
+  ogs1.draw(255, 255, 255);
+  osc1.draw(255, 255, 255);
 
   vgetchar();
 
   ar1.draw(0, 0, 0);
   l1.draw(0, 0, 0);
+  ogs1.draw(0, 0, 0);
+  osc1.draw(0, 0, 0);
 
   vgetchar();
 
@@ -53,15 +70,10 @@ int main(void) {
 
   oSegment osg1(100, 100, 200, 200);
   vc << osg1.who() << endl;
-  osg1.draw(255, 255, 255);
   vgetchar();
 
-  osg1.draw(0, 0, 0);
-  vgetchar();
-
-  oSector osc1(100, 100, 200, 200);
-  vc << osc1.who() << endl;
-  osc1.draw(255, 255, 255);
+  oSector ocs1(100, 100, 200, 200);
+  vc << ocs1.who() << endl;
   vgetchar();
 
   return 0;

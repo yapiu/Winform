@@ -9,3 +9,5 @@ const char *oArc::who() {
 }
 
 void oArc::draw(int red, int green, int blue) { arc::draw(red, green, blue); }
+
+void oArc::move() { arc::move(); }

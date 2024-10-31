@@ -16,9 +16,9 @@ arc::arc(int x, int y, double R, double angular1, double angular2) {
 arc::~arc() {}
 
 void arc::move() {
-  std::vgetchar();
+  //std::vgetchar();
   //draw(0, 0, 0);
   xc += x0;
   yc += y0;
-  arc::draw(255, 255, 255);
+  //arc::draw(255, 255, 255);
 }

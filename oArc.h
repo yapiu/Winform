@@ -7,4 +7,5 @@ public:
        double angular2 = 0);
   const char *who(void);
   void draw(int red, int green, int blue);
+  void move();
 };

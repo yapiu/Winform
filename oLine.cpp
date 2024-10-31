@@ -8,3 +8,5 @@ const char *oLine::who() {
 }
 
 void oLine::draw(int red, int green, int blue) { line::draw(red, green, blue); }
+
+void oLine::move() { line::move(); }

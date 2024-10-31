@@ -12,21 +12,13 @@ line::line(int x_1, int y_1, int x_2, int y_2) {
   y2 = y_2;
 }
 
-void line::move(bool cx1, bool cy1, bool cx2, bool cy2) {
+void line::move() {
   //line::draw(0, 0, 0);
-  if (cx1 == 1) {
     x1 += x0;
-  }
-  if (cy1 == 1) {
     y1 += y0;
-  }
-  if (cx2 == 1) {
     x2 += x0;
-  }
-  if (cy2 == 1) {
     y2 += y0;
-  }
-  line::draw(255, 255, 255);
+  // line::draw(255, 255, 255);
 }
 
 line::~line() {}

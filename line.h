@@ -9,7 +9,7 @@ protected:
   int x2, y2;
 
 public:
-  void move(bool, bool, bool, bool);
+  void move();
   void draw(int, int, int);
 
   line(int x1 = 0, int y1 = 0, int x2 = 0, int y2 = 0);
