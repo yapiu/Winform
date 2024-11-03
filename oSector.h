@@ -1,7 +1,8 @@
 #include "oSegment.h"
+#include "object.h"
 #include "reaperOline.h"
 
-class oSector : public oSegment, public reaperOline {
+class oSector : public oSegment, public reaperOline{
 private:
 public:
   void draw(int, int, int);

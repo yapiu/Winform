@@ -13,7 +13,6 @@ int main(void) {
   oSegment ogs1(150, 150, 170, 170);
   oSector osc1(200, 200, 300, 300);
 
-
   const int number = 10;
 
   basePoint *Ar[number];
@@ -30,17 +29,7 @@ int main(void) {
     Ar[i]->move(5, 10);
   }
 
-  ar1.draw(255, 255, 255);
-  l1.draw(255, 255, 255);
-  ogs1.draw(255, 255, 255);
-  osc1.draw(255, 255, 255);
-  
   vgetchar();
-
-  ar1.draw(0, 0, 0);
-  l1.draw(0, 0, 0);
-  ogs1.draw(0, 0, 0);
-  osc1.draw(0, 0, 0);
 
   ar1.move();
   l1.move();
@@ -61,21 +50,21 @@ int main(void) {
 
   vgetchar();
 
-  // oLine ol1(2, 3, 4, 5);
-  // vc << ol1.who() << endl;
-  // vgetchar();
+  oLine ol1(2, 3, 4, 5);
+  vc << ol1.who() << endl;
+  vgetchar();
 
-  // oArc oar1(10, 5, 1, 2, 4);
-  // vc << oar1.who() << endl;
-  // vgetchar();
+  oArc oar1(10, 5, 1, 2, 4);
+  vc << oar1.who() << endl;
+  vgetchar();
 
-  // oSegment osg1(100, 100, 200, 200);
-  // vc << osg1.who() << endl;
-  // vgetchar();
+  oSegment osg1(100, 100, 200, 200);
+  vc << osg1.who() << endl;
+  vgetchar();
 
-  // oSector ocs1(100, 100, 200, 200);
-  // vc << ocs1.who() << endl;
-  // vgetchar();
+  oSector ocs1(100, 100, 200, 200);
+  vc << ocs1.who() << endl;
+  vgetchar();
 
   return 0;
 }

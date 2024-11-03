@@ -1,7 +1,7 @@
 #include "oArc.h"
 #include "oLine.h"
 
-class oSegment : public oLine, public oArc {
+class oSegment : public oLine, public oArc{
 public:
   void draw(int, int, int);
   const char *who(void);
