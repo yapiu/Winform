@@ -11,7 +11,3 @@ void basePoint::move(int dx, int dy) {
   y0 += dy;
 }
 
-void basePoint::resetBasePoint() {
-  x0 = 0;
-  y0 = 0;
-}

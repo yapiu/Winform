@@ -1,6 +1,7 @@
 #include "arc.h"
 
 void arc::draw(int red, int green, int blue) {
+  Sleep(2);
   std::setcolor(red, green, blue);
   std::putarc(xc, yc, r, a1, a2);
 }

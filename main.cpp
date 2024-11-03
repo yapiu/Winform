@@ -10,8 +10,9 @@ int main(void) {
 
   line l1(1, 1, 100, 100);
   arc ar1(120, 120, 50, 1.5, 2.5);
+  oSegment ogs1(150, 150, 170, 170);
   oSector osc1(200, 200, 300, 300);
-  oSegment ogs1(100, 100, 150, 150);
+
 
   const int number = 10;
 
@@ -44,7 +45,7 @@ int main(void) {
   ar1.move();
   l1.move();
   ogs1.move();
-  //osc1.move(); // ломается
+  osc1.move();
 
   ar1.draw(255, 255, 255);
   l1.draw(255, 255, 255);
@@ -60,21 +61,21 @@ int main(void) {
 
   vgetchar();
 
-  oLine ol1(2, 3, 4, 5);
-  vc << ol1.who() << endl;
-  vgetchar();
+  // oLine ol1(2, 3, 4, 5);
+  // vc << ol1.who() << endl;
+  // vgetchar();
 
-  oArc oar1(10, 5, 1, 2, 4);
-  vc << oar1.who() << endl;
-  vgetchar();
+  // oArc oar1(10, 5, 1, 2, 4);
+  // vc << oar1.who() << endl;
+  // vgetchar();
 
-  oSegment osg1(100, 100, 200, 200);
-  vc << osg1.who() << endl;
-  vgetchar();
+  // oSegment osg1(100, 100, 200, 200);
+  // vc << osg1.who() << endl;
+  // vgetchar();
 
-  oSector ocs1(100, 100, 200, 200);
-  vc << ocs1.who() << endl;
-  vgetchar();
+  // oSector ocs1(100, 100, 200, 200);
+  // vc << ocs1.who() << endl;
+  // vgetchar();
 
   return 0;
 }

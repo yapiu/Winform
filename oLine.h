@@ -1,3 +1,6 @@
+#ifndef OLINE_H
+#define OLINE_H
+
 #include "line.h"
 #include "object.h"
 
@@ -8,3 +11,5 @@ public:
   void draw(int red, int green, int blue);
   void move();
 };
+
+#endif

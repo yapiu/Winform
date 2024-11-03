@@ -1,3 +1,6 @@
+#ifndef __OARC_DEFINED__
+#define __OARC_DEFINED__
+
 #include "arc.h"
 #include "object.h"
 
@@ -9,3 +12,5 @@ public:
   void draw(int red, int green, int blue);
   void move();
 };
+
+#endif

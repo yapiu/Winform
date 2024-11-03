@@ -1,20 +1,24 @@
+
 #include "oSector.h"
-#include "basePoint.h"
-#include "line.h"
+#include "oArc.h"
+#include "oLine.h"
 #include "object.h"
+#include "reaperOline.h"
 #include <cmath>
 
-oSector::oSector(int x1, int y1, int x2, int y2) : oSegment(x1, y1, x2, y2) {
 
+oSector::oSector(int x1, int y1, int x2, int y2)
+    : oSegment(x1, y1, x2, y2), reaperOline(x1, y1, x2, y2) {
+  oLine::x2 = xc + 2 * r * atan(a1);
+  oLine::y2 = yc + 2 * r;
+  reaperOline::x1 = xc + 2 * r * atan(a1);
+  reaperOline::y1 = yc + 2 * r;
 }
 
 void oSector::draw(int red, int green, int blue) {
+  reaperOline::draw(red, green, blue);
+  oLine::draw(red, green, blue);
   oArc::draw(red, green, blue);
-  oLine l1(x1, y1, xc + 2 * r * atan(a1), yc + 2 * r);
-  oLine l2(xc + 2 * r * atan(a1), yc + 2 * r, x2, y2);
-  l1.draw(red, green, blue);
-  l2.draw(red, green, blue);
-  num -= 2;
 }
 
 const char *oSector::who() {
@@ -22,6 +26,8 @@ const char *oSector::who() {
   return "I'm a oSector";
 }
 
-oSector oSector::move() {
-  oSegment::move();
+void oSector::move() {
+  reaperOline::move(); 
+  oLine::move();
+  oArc::move(); 
 }

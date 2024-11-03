@@ -12,7 +12,6 @@ public:
   basePoint(int x = 0, int y = 0);
   ~basePoint() {}
   virtual void draw(int, int, int) = 0;
-  void resetBasePoint();
 };
 
 #endif

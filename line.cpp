@@ -1,6 +1,8 @@
 #include "line.h"
+#include <synchapi.h>
 
 void line::draw(int red, int green, int blue) {
+  Sleep(2);
   std::setcolor(red, green, blue);
   std::putline(x1, y1, x2, y2);
 }
